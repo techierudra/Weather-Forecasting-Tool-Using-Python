@@ -65,9 +65,8 @@ def parse_forecast_data(data):
         temperature_night = round(day["temp"]["night"] - 273.15)
         humidity = day["humidity"]
         wind_speed = day["wind_speed"]
- # Convert Unix timestamp to datetime object
+
         date = datetime.datetime.fromtimestamp(day["dt"])
-        # Format the date as dd/mm/yyyy
         formatted_date = date.strftime("%d/%m/%Y")
 
         print("----------------------------")
